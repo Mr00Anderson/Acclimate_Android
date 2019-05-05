@@ -16,5 +16,7 @@ The public and Open Source repository of the [Android application](https://play.
 * [Olivier Lepage-Applin](https://github.com/L-Applin) : OSMDroid integration (map), Android frontend and backend (file storage, karma system, etc.)
 * [Sophie Savoie](https://github.com/sophiesavoie) : Database, web parser, data source integration (real time data extraction), Monitored Zones integration in backend
 
-# Screenshots
+# [Screenshots](https://github.com/payne911/Acclimate_Android/tree/master/repo_images)
 ![AlertInfo](/repo_images/alert_info.png?raw=true&s=200 "AlertInfo")
+![Home](/repo_images/home.png?raw=true&s=200 "Home")
+![Notification](/repo_images/notif.png?raw=true&s=200 "Notification")
