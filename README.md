@@ -17,4 +17,4 @@ The public and Open Source repository of the [Android application](https://play.
 * [Sophie Savoie](https://github.com/sophiesavoie) : Database, web parser, data source integration (real time data extraction), Monitored Zones integration in backend
 
 # Screenshots
-![AlertInfo](/repo_images/alert_info.png?raw=true "AlertInfo"){:width="200px"}
+![AlertInfo](/repo_images/alert_info.png?raw=true&s=200 "AlertInfo")
