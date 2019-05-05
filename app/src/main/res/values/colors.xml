@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ec5446</color>
+    <color name="colorPrimaryDark">#d5202a</color>
+    <color name="colorAccent">#434345</color>
+
+    <color name="white">#FAFAFA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+
+
+    <color name="user_buble_bckg">#FAFAFA</color>
+
+    <color name="fire">#F0532D</color>
+    <color name="water">#0099CF</color>
+    <color name="weather">#B9BDBF</color>
+    <color name="earth">#CD9A62</color>
+
+    <color name="fire_txt">#F0532D</color>
+    <color name="water_txt">#0099CF</color>
+    <color name="weather_txt">#B9BDBF</color>
+    <color name="earth_txt">#CD9A62</color>
+
+    <color name="default_vote">#CFD1D4</color>
+    <color name="default_vote_darker">#7F8182</color>
+
+
+</resources>

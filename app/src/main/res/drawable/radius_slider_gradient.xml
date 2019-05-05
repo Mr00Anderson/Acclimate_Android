@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Le gradient du background du Home Page -->
+
+    <item>
+        <shape>
+            <gradient android:angle="135" android:centerColor="#ec5446" android:endColor="#ea3844" android:startColor="#ec5446" android:type="linear" />
+        </shape>
+    </item>
+</selector>

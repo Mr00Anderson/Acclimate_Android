@@ -1,0 +1,116 @@
+ALERTE LIVE / HISTORIQUE :
+
+
+
+ALERTE USER :
+
+{
+    "autoId":0,
+    "certitude":"Observé",
+    "count":null,
+    "dateDeMiseAJour":"2008/08/03 00:00:00",
+    "description":"...",
+    "geometry":{
+        "coordinates":[-68.0872817539999,48.624732158],
+        "polyCoordinates":null,"type":"Point"
+        },
+    "id":"69433",
+    "nom":"Inondation",
+    "severite":"Mineure",
+    "source":"user",
+    "sousCategorie":"Inondation",
+    "territoire":"Grand-Métis",
+    "type":"Eau",
+    "urgence":"Passée",
+    "minusOneUsers":[],
+    "photoPath":null,
+    "plusOneUsers":[],
+    "score":1,
+    "uId":null,
+    "user":{
+        "dateCreation":"2018-08-23",
+        "email":"sophies.s@live.com",
+        "firstName":"Sophie",
+        "lastName":"Savoie",
+        "karma":{
+            "points":0
+            },
+        "registrationToken":["cMKS2VqWNRY:APA91bF0GOUdKTa2ZcCUIhzDXYnewGovbrqDTJPpPVfW4nbBWRKjLHg9inz6ahIhg56s2tQ7ZFefho93iXa_XngE4raWMMJwef8xLfCUIzFy0QnkY-b6czeeShGDCxOEFMqeDuVFlx-kqVpUgc-WNmll7DB-UAmqGg"],
+        "uId":"x1232",
+        "userName":"sophies"
+        }
+}
+
+
+
+MONITORED ZONE :
+
+{
+    "geometry":{
+        "coordinates":null,
+        "polyCoordinates":[[76.0,46.0],[76.1,45.9]],
+        "type":"Polygon"
+        },
+    "name":"Test MZ",
+    "radius":0,
+    "user":{
+        "dateCreation":"2018-08-21",
+        "email":"jowblow79@gf.coa",
+        "firstName":
+        "Bobby",
+        "karma":{
+            "points":0
+        },
+        "lastName":"JowBlow",
+        "registrationToken":["fowijfo433"],
+        "uId":"greggy4987",
+        "userName":
+        "tempoBob476"
+    },
+    "userId":"greggy4987",
+    "zoneId":9428
+}
+
+
+USER :
+
+{
+    "dateCreation":"2018-08-21",
+    "email":"jowblow79@gf.coa",
+    "firstName":
+    "Bobby",
+    "karma":{
+        "points":0
+    },
+    "lastName":"JowBlow",
+    "registrationToken":["fowijfo433"],
+    "uId":"greggy4987",
+    "userName":
+    "tempoBob476"
+},
+
+
+
+url monitored zone :
+
+
+
+url user :
+
+
+
+PATCH Geometry :
+    Envoyer l'instance de la geometry dans le body du patch
+    Alerte : ???
+    MonitoredZone :
+
+
+
+Geometry :
+
+    "Polygon" / "Point"
+
+
++1 alerte :
+
+PATCH : liste des +1 ou -1 users qui ne contient que le nouveau membre à ajouter

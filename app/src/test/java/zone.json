@@ -1,0 +1,31 @@
+{
+  "zoneId": 9461,
+  "name": "chalet",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      76,
+      -46
+    ],
+    "polyCoordinates": null
+  },
+  "radius": 50,
+  "user": {
+    "uId": "x1232",
+    "registrationToken": [
+      "eipgnpehipqhwifpowqbwio"
+    ],
+    "dateCreation": "2018-08-24 15:46:18",
+    "karma": {
+      "points": 0
+    },
+    "userName": "sophie",
+    "email": "sophies.s@gmail.com",
+    "firstName": "Sophie",
+    "lastName": "Savoie"
+  },
+  "dateCreation": "2018-08-24 15:36:46",
+  "userId": "x1232",
+  "pointType": true,
+  "polygonType": false
+}

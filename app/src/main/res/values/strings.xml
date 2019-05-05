@@ -1,0 +1,372 @@
+<resources>
+    <string name="app_name">Acclimate</string>
+
+    <!-- Privacy Policy (Google Play compliance) -->
+    <string name="pp_title">Politique de confidentialité</string>
+    <string name="pp_text">Nous utilisons votre localisation pour vous situer sur la carte (vous pouvez désactiver cette option dans vos préférences).\n
+        De plus, suite à une inscription, l\'application aura possiblement accès à votre nom et email. Par défaut, vos informations sont cachées des autres usagers.\n\n
+        Pour plus de détails, visitez: acclimate-web.herokuapp.com/privacy_policy.html</string>
+
+    <!-- Top bar on MainActivity -->
+    <string name="action_search">Recherche</string>
+    <string name="profileBtn">Profile</string>
+
+    <string-array name="severity">
+        <item>Mineure</item>
+        <item>Moyen</item>
+        <item>Majeure</item>
+        <item>Danger de vie</item>
+    </string-array>
+
+    <string-array name="alert_type">
+        <item>Eau</item>
+        <item>Feu</item>
+        <item>Seisme</item>
+        <item>Météo</item>
+    </string-array>
+
+
+    <string-array name="sous_type_feu">
+        <item>Incendie</item>
+        <item>Incendie domestique</item>
+        <item>Feu de forêt</item>
+        <item>Feu de brousse</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="sous_type_eau">
+        <item>Inondation</item>
+        <item>Débordement d\'égoût</item>
+        <item>Débordement de rivière</item>
+        <item>Autre</item>
+
+    </string-array>
+
+    <string-array name="sous_type_seisme">
+        <item>Tremblement de terre</item>
+        <item>Éboulement</item>
+        <item>Crevasse</item>
+        <item>Autre</item>
+    </string-array>
+
+    <string-array name="sous_type_meteo">
+        <item>Pluie</item>
+        <item>Orage</item>
+        <item>Tempête de neige</item>
+        <item>Canicule</item>
+        <item>Grêle</item>
+        <item>Tornade</item>
+        <item>Ouragan</item>
+        <item>User is a goat</item>
+        <item>Autre</item>
+    </string-array>
+
+
+    <!-- Connection and warnings -->
+    <string name="no_connection_for_add_alert">
+        Une connection à internet est requise pour ajouter une alerte.
+    </string>
+
+    <string name="no_connection_for_vote_alert">
+        Une connection à internet est requise pour voter sur une alerte.
+    </string>
+
+
+    <!-- First options in the extendable menu -->
+    <string name="highlight">Bound Request</string>
+    <string name="maj">Mise à jour</string>
+    <string name="add">Surveiller zone</string>
+    <string name="clear_MZ">Effacer zones</string>
+
+    <!-- Filters in the extendable menu -->
+    <string name="cB_fire">Feux</string>
+    <string name="cB_water">Inondations</string>
+    <string name="cB_terrain">Terrain</string>
+    <string name="cB_meteo">Meteo</string>
+    <string name="cB_zones">Afficher zones</string>
+    <string name="cB_histo">Historique</string>
+    <string name="settings">Settings</string>
+    <string name="cB_users">Alertes d\'usagers</string>
+
+    <!-- Dialog d'ajout de Pin -->
+    <string name="warning">Ajouter une alerte de \nquel type au serveur ?</string>
+    <string name="feu">Feu</string>
+    <string name="eau">Eau</string>
+    <string name="vent">Météo</string>
+    <string name="seisme">Terrain</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- TODO: (Eventually remove) Pour la "notifTestActivity" -->
+    <string name="default_notification_channel_id" translatable="false">AcclimateAlert</string>
+    <string name="quickstart_message">Click the SUBSCRIBE TO NEWS button below to subscribe to the
+        news topic. Messages sent to the news topic will be received. The LOG TOKEN button logs the
+        InstanceID token to logcat.</string>
+    <string name="subscribe_to_news">Subscribe To News</string>
+    <string name="log_token">Log Token</string>
+    <string name="msg_subscribed">Subscribed to news topic</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <!--
+        This is the name that users will see when interacting with this channel.
+        It should describe the category of notifications that will be sent through this channel
+     -->
+    <string name="default_notification_channel_name" translatable="true">News</string>
+    <string name="msg_subscribe_failed">Failed to subscribe to news topic</string>
+
+
+    <!--  Auth UI  -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe (facultatif)</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="loading">Chargement</string>
+    <string name="verify_email">Renvoyer le email de confirmation</string>
+    <string name="sign_in_email">Se connecter</string>
+    <string name="register_email">S\'enregistrer</string>
+    <string name="email_sign_out">Se déconnecter</string>
+
+
+    <!-- Strings related to Preferences -->
+    <string-array name="pref_network_frequency_titles">
+        <item>3 minutes</item>
+        <item>10 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>5 hours</item>
+    </string-array>
+    <string-array name="pref_network_frequency_values">
+        <item>3</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>300</item>
+    </string-array>
+
+    <string-array name="pref_network_auto_refresh_titles">
+        <item>Jamais</item>
+        <item>Rapide</item>
+        <item>Moyen</item>
+        <item>Long</item>
+    </string-array>
+    <string-array name="pref_network_auto_refresh_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <!-- Strings related to Settings (in "examples") TODO: Remove eventually -->
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+
+    <!-- Pour le Bubble Dialog de Oli ? -->
+    <string name="title_activity_new_alert_form">Nouvelle alerte</string>
+    <string name="action_settings">Settings</string>
+    <string name="temp_bubble_title">Titre de l\'alerte</string>
+    <string name="temp_bubble_desc">Description de l\'alerte</string>
+    <string name="more_info_button_text">plus d\'info</string>
+    <string name="territoire_placeholder">Territoire</string>
+    <string name="form_alert_subtype">Sous-catégorie</string>
+    <string name="add_photo_text">Ajoutez une photo!</string>
+
+
+    <string name="button_confrim">confirmer</string>
+    <string name="button_cancel">annuler</string>
+    <string name="no_plus_one_on_server_error">Impossible d\'envoyer la modification, veuillez réessayer plus tard</string>
+
+    <!-- Auth -->
+    <string name="required_auth_for_alerts">Veuillez vous identifier afin d\'ajouter un alerte.</string>
+
+    <string name="defaul_alert_amount_value">- alertes actives</string>
+    <string name="defaul_alert_user_amount_value">- saisies d\'USAGERS</string>
+
+    <string name="on_post_alert_success">Alerte ajoutée avec succès!</string>
+    <string name="on_post_alert_falure">Un problème s\'est produit pendant l\'envoi, veuillez réessayer.</string>
+
+    <!-- InfoWindow vote plus one and minus one -->
+    <string name="same_alert">Vous ne pouvez pas voter pour votre prore alerte! Franchement &#8230;</string>
+    <string name="impossible_to_vote">Désolé : impossible de voter pour l\'instant. Veuillez réessayer plus tard.</string>
+    <string name="already_pressed">Vous ne pouvez pas voter deux fois la même chose sur la même alerte!</string>
+    <string name="vote_completed">Merci de votre participation</string>
+    <string name="register_required_to_vote">
+        Veuillez vous identifier ou vous enregistrer afin de pouvoir voter sur les alertes!
+    </string>
+
+
+    <!-- PLACEHOLDER FOR TESTING -->
+    <!-- ALERTS -->
+    <string name="placeHolder_alert_title">Débordement du St-Laurent entre les rues Peel et Concordia</string>
+    <string name="placeholder_alert_category">Eau</string>
+    <string name="placeholder_alert_subCat">Innondation</string>
+    <string name="placeholder_alert_description">
+        Les averses intenses ont causé un refoulement du st-laurent au centre-ville.
+        Les service d\'urgence ont bloqué plusieurs rues et intersections puisque le viveau
+        d\'eau atteint parfois plus d\'un mètre !
+    </string>
+    <string name="placeholder_alert_severité">majeure</string>
+
+    <string name="more_info_default_severity">Sévérité : %s</string>
+    <string name="more_info_default_source">Source : %s &#8212; %s</string>
+    <string name="more_info_pos_default">lat : %s  lng : %s</string>
+
+
+    <string name="oli_iud">"tXoW05Bv0DUGJz5BBi5UXwEPU212"</string>
+
+
+    <!-- KARMA -->
+    <string name="not_enough_karma_to_vote">
+        Vous devez avoir au moins 5 point accumulé afin de voter pour une alert !
+        Appuyez longuement sur la carte ou consulter notre <a href="www.applin.ca/acclimate/guide"> guide d\'utilisation</a>.
+    </string>
+    <string name="title_activity_more_info_alerts">moreInfoAlerts</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alert_category">catégorie</string>
+    <string name="alert_date">date</string>
+    <string name="alert_subcat">sous-catégorie</string>
+    <string name="alert_source">source</string>
+    <string name="alert_scre">score</string>
+    <string name="alert_title">titre</string>
+    <string name="alert_description">description</string>
+    <string name="alert_certitude">certitude</string>
+    <string name="alert_severity">sévérité</string>
+    <string name="placeholder_formated_date">5 février 2018 &#8211; 20h35</string>
+    <string name="placeholder_username">lapplin</string>
+    <string name="placeholder_score">42</string>
+    <string name="placeholder_karma">82</string>
+    <string name="placeholder_karma_content_descriptio">icône du karma</string>
+    <string name="placeholder_certitude">observée</string>
+    <string name="placeholder_severity">majeure</string>
+    <string name="moreinfo_extra_plusone">upvote</string>
+    <string name="moreinfo_extra_minusone">downvote</string>
+    <string name="moreinfo_user_title">utilisateurs</string>
+    <string name="moreindo_edit_alert">modif</string>
+    <string name="moreinfo_trash_alert">effacer</string>
+
+
+    <string name="report_email">lapplin.olivier@gmail.com</string>
+    <string name="report_subject">Message à propos de l\'alerte : </string>
+    <string name="report_body">J\'aimerais attirer votre attention sur cette alerte à cause des raisons suivantes : \n \n \n</string>
+    <string name="title_activity_alert_list">AlertListActivity</string>
+
+    <string name="delete_alert">"Voulez-vous vraiment effacer votre alerte ? Elle sera perdue À TOUT JAMAIS (musique dramatique) !"</string>
+    <string name="confirm_delete_alert">"Oui ! elle est moche de toute façon"</string>
+    <string name="cancel_delete_alert">NON !!! Je l\'aime beaucoup trop !</string>
+    <string name="moreinfo_extra_photo">Image</string>
+
+</resources>

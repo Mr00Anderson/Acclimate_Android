@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.acclimate.payne.simpletestapp.activities.main.MainActivity">
+
+
+    <!-- Search Button -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/action_search"
+        android:visible="true"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always" />
+
+    <!-- User profile button -->
+    <item
+        android:id="@+id/profileBtn"
+        android:icon="@drawable/ic_authentication"
+        android:title="@string/profileBtn"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <!-- Ajouter le CurrentBoundingBox (RECTANGLE-type) aux Zones Surveillées -->
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/ic_add_bounding_box"
+        android:title="@string/add"
+        android:visible="true"
+        app:showAsAction="always" />
+
+    <!-- Ajouter le CurrentBoundingBox aux Zones Surveillées -->
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Préférences"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>

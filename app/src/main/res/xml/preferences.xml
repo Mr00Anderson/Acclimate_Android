@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- Filtres d'alertes -->
+    <PreferenceScreen
+        android:key="pref_ps_alert"
+        android:title="Filtres d'alertes"
+        android:summary="Les sélections représentent les alertes qui seront affichées sur la carte"
+        android:icon="@drawable/ic_pref_alerts">
+
+        <PreferenceCategory
+            android:title="Alertes officielles"
+            android:summary="Plusieurs types d'alertes peuvent tomber dans ces classifications de catégories">
+
+            <CheckBoxPreference
+                android:key="pref_alert_cb_fireFilter"
+                android:title="Afficher les alertes de feu"
+                android:defaultValue="true"
+                android:icon="@drawable/icon_feu"/>
+            <CheckBoxPreference
+                android:key="pref_alert_cb_waterFilter"
+                android:title="Afficher les alertes d'eau"
+                android:defaultValue="true"
+                android:icon="@drawable/icon_goutte"/>
+            <CheckBoxPreference
+                android:key="pref_alert_cb_windFilter"
+                android:title="Afficher les alertes de vent"
+                android:defaultValue="true"
+                android:icon="@drawable/icon_vent"/>
+            <CheckBoxPreference
+                android:key="pref_alert_cb_earthFilter"
+                android:title="Afficher les alertes de terrain"
+                android:defaultValue="true"
+                android:icon="@drawable/icon_seisme"/>
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="Alertes d'usagers"
+            android:summary="Plusieurs types d'alertes peuvent tomber dans ces catégories">
+
+            <SwitchPreference
+                android:key="pref_alert_sw_userFilter"
+                android:title="Afficher"
+                android:defaultValue="true" />
+            <SwitchPreference
+                android:key="pref_alert_sw_userReplicateFilters"
+                android:title="Filtrer les alertes d'usagers"
+                android:summary="Réplique les préférences en lien avec les alertes officielles (ci-haut) pour ne pas afficher tous les types d'alertes que les usagers publient"
+                android:dependency="pref_alert_sw_userFilter"
+                android:defaultValue="true" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="Alertes historiques"
+            android:summary="Correspondent aux alertes du passé, enregistrées dans notre base de données. Attention: il y en a plusieurs milliers alors cela peut rendre la visualisation de la carte plus lente. Nous suggérons plutôt de visualiser celles-ci via notre WebApp: https://acclimate-web.herokuapp.com/">
+
+            <SwitchPreference
+                android:key="pref_alert_sw_histoFilter"
+                android:title="Afficher"
+                android:summary="Il n'est pas recommandé d'activer cette option. Visitez plutôt notre WebApp @ https://acclimate-web.herokuapp.com/"
+                android:defaultValue="false" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+
+    <!-- Monitored Zones -->
+    <PreferenceScreen
+        android:key="pref_ps_mz"
+        android:title="Zones surveillées"
+        android:summary="Pour gérer vos zones surveillées"
+        android:icon="@drawable/ic_pref_mz">
+
+        <SwitchPreference
+            android:key="pref_mz_sw_mzDisplayFilter"
+            android:title="Afficher"
+            android:summary="Les zones surveillées seront affichées en rouge sur votre carte"
+            android:defaultValue="true" />
+
+        <PreferenceScreen
+            android:key="pref_mz_removeAll"
+            android:title="Toutes les supprimer"
+            android:summary="Pour supprimer toutes vos Zones Surveillées" />
+    </PreferenceScreen>
+
+
+    <!-- [WIP] Alertes sauvegardées : pour permettre de gérer les alertes de l'usagers -->
+    <PreferenceScreen
+        android:key="pref_user_alert"
+        android:title="Vos alertes [WIP]"
+        android:summary="Afin de gérer vos alertes courantes et passée stockée sur le serveur : effacer, modifier, etc."
+        android:icon="@drawable/ic_cloud_upload_black_24dp">
+
+
+    </PreferenceScreen>
+
+
+    <!-- Profile -->
+    <PreferenceScreen
+        android:key="pref_ps_profile"
+        android:title="Profile"
+        android:summary="Accessible que si vous êtes présentement authentifié"
+        android:icon="@drawable/ic_pref_profile">
+
+        <SwitchPreference
+            android:key="pref_profile_sw_aliasFilter"
+            android:title="Afficher mon alias"
+            android:summary="Apparaîtra sur les alertes que vous postez au lieu de votre identifiant numérique"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_pref_display_name"/>
+
+        <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+        <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+        <EditTextPreference
+            android:key="pref_profile_txt_displayName"
+            android:title="Nom d'usager (alias)"
+            android:dependency="pref_profile_sw_aliasFilter"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:selectAllOnFocus="true" />
+    </PreferenceScreen>
+
+
+    <!-- Notifications -->
+    <PreferenceScreen
+        android:key="pref_ps_notif"
+        android:title="Notifications"
+        android:summary="Les notifications vous sont envoyées par notre serveur selon vos préférences"
+        android:icon="@drawable/ic_pref_notifs">
+
+        <SwitchPreference
+            android:key="pref_notif_sw_mirrorAlertFilters"
+            android:title="Appliquer mes filtres d'alertes"
+            android:summary="Pour ne recevoir des notifications qu'en lien avec les alertes que vous affichez sur la carte (ces préférences se retrouvent dans la catégorie « Filtres d'alertes »)"
+            android:defaultValue="false"/>
+
+        <SwitchPreference
+            android:key="pref_notif_sw_silence"
+            android:title="Silence"
+            android:summary="Pour ne pas que les notifications émettent de son à leur réception"
+            android:defaultValue="false"/>
+
+        <SwitchPreference
+            android:key="pref_notif_sw_block"
+            android:title="Bloquer"
+            android:summary="Pour ne plus recevoir de notifications (même vos zones surveillées ne causeront plus l'envoie de notifications)"
+            android:defaultValue="false"/>
+    </PreferenceScreen>
+
+
+    <!-- GPS -->
+    <PreferenceScreen
+        android:key="pref_ps_gps"
+        android:title="GPS"
+        android:summary="En lien avec la géolocalisation utilisée par l'application"
+        android:icon="@drawable/ic_pref_gps">
+
+        <SwitchPreference
+            android:key="pref_gps_sw_activate"
+            android:title="Activer la localisation"
+            android:summary="Certaines fonctionnalités ne seront plus disponibles si cette option est désactivée"
+            android:defaultValue="true"/>
+
+        <PreferenceScreen
+            android:key="pref_gps_permissions"
+            android:title="Visualiser/modifier les permissions"
+            android:summary="Ouvre les préférences globales de votre téléphone">
+        </PreferenceScreen>
+    </PreferenceScreen>
+
+
+    <!-- Network -->
+    <PreferenceScreen
+        android:key="pref_ps_network"
+        android:title="Réseau"
+        android:summary="Pour gérer la connection réseau"
+        android:icon="@drawable/ic_pref_network">
+
+        <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to dismiss it. -->
+        <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
+        <ListPreference
+            android:key="pref_network_list_refresh_rate"
+            android:title="Espacement minimal des requêtes"
+            android:summary="Temps requis minimal avant que le système ne décide de faire une nouvelle requête (en réalité, ce n'est donc pas à un interval régulier)"
+            android:entries="@array/pref_network_frequency_titles"
+            android:entryValues="@array/pref_network_frequency_values"
+            android:defaultValue="3"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null" />
+
+        <SwitchPreference
+            android:key="pref_network_sw_wifi_only"
+            android:title="Activer la restriction WiFi"
+            android:summary="Mettre à jour les nouvelles alertes uniquement lorsque connecté à un réseau wifi"
+            android:defaultValue="false"/>
+
+        <ListPreference
+            android:key="pref_network_list_auto_refresh"
+            android:title="Fréquence de rafraîchissement automatique"
+            android:summary="Certaines informations peuvent être automatiquement rafraîchies (par exemple, les alertes sur la carte)"
+            android:entries="@array/pref_network_auto_refresh_titles"
+            android:entryValues="@array/pref_network_auto_refresh_values"
+            android:defaultValue="0"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null" />
+    </PreferenceScreen>
+
+
+    <!--&lt;!&ndash; Les exemples &ndash;&gt;-->
+    <!--<PreferenceScreen-->
+        <!--android:title="Exemples (TO REMOVE EVENTUALLY)">-->
+
+        <!--<Preference-->
+            <!--android:key="basic_preference"-->
+            <!--android:title="title_basic_preference"-->
+            <!--android:summary="summary_basic_preference" />-->
+
+        <!--<Preference-->
+            <!--android:key="stylish_preference"-->
+            <!--android:title="title_stylish_preference"-->
+            <!--android:summary="summary_stylish_preference" />-->
+
+        <!--<Preference-->
+            <!--android:key="preference_with_icon"-->
+            <!--android:title="Preference with icon"-->
+            <!--android:summary="This preference has an icon"-->
+            <!--android:icon="@android:drawable/ic_menu_camera" />-->
+
+        <!--<PreferenceCategory-->
+            <!--android:title="inline_preferences">-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="checkbox_preference"-->
+                <!--android:title="title_checkbox_preference"-->
+                <!--android:summary="summary_checkbox_preference" />-->
+
+            <!--<SwitchPreference-->
+                <!--android:key="switch_preference"-->
+                <!--android:title="Switch preference"-->
+                <!--android:summary="This is a switch" />-->
+
+        <!--</PreferenceCategory>-->
+
+        <!--<PreferenceCategory-->
+            <!--android:title="dialog_based_preferences">-->
+
+            <!--<EditTextPreference-->
+                <!--android:key="edittext_preference"-->
+                <!--android:title="title_edittext_preference"-->
+                <!--android:summary="summary_edittext_preference"-->
+                <!--android:dialogTitle="dialog_title_edittext_preference" />-->
+
+            <!--<ListPreference-->
+                <!--android:key="list_preference"-->
+                <!--android:title="title_list_preference"-->
+                <!--android:summary="summary_list_preference"-->
+                <!--android:entries="@array/pref_sync_frequency_titles"-->
+                <!--android:entryValues="@array/pref_sync_frequency_values"-->
+                <!--android:dialogTitle="dialog_title_list_preference" />-->
+
+            <!--&lt;!&ndash; NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to-->
+         <!--dismiss it. &ndash;&gt;-->
+            <!--&lt;!&ndash; NOTE: ListPreference's summary should be set to its value by the activity code. &ndash;&gt;-->
+            <!--<ListPreference-->
+                <!--android:defaultValue="-1"-->
+                <!--android:entries="@array/pref_example_list_titles"-->
+                <!--android:entryValues="@array/pref_example_list_values"-->
+                <!--android:key="example_list"-->
+                <!--android:negativeButtonText="@null"-->
+                <!--android:positiveButtonText="@null"-->
+                <!--android:title="@string/pref_title_add_friends_to_messages" />-->
+
+        <!--</PreferenceCategory>-->
+
+        <!--<PreferenceCategory-->
+            <!--android:title="launch_preferences">-->
+
+            <!--&lt;!&ndash; This PreferenceScreen tag serves as a screen break (similar to page break-->
+                 <!--in word processing). Like for other preference types, we assign a key-->
+                 <!--here so it is able to save and restore its instance state. &ndash;&gt;-->
+            <!--<PreferenceScreen-->
+                <!--android:key="screen_preference"-->
+                <!--android:title="title_screen_preference"-->
+                <!--android:summary="summary_screen_preference">-->
+
+                <!--&lt;!&ndash; You can place more preferences here that will be shown on the next screen. &ndash;&gt;-->
+
+                <!--<CheckBoxPreference-->
+                    <!--android:key="next_screen_checkbox_preference"-->
+                    <!--android:title="title_next_screen_toggle_preference"-->
+                    <!--android:summary="summary_next_screen_toggle_preference" />-->
+
+            <!--</PreferenceScreen>-->
+
+            <!--<PreferenceScreen-->
+                <!--android:title="title_intent_preference"-->
+                <!--android:summary="summary_intent_preference">-->
+
+                <!--<intent android:action="android.intent.action.VIEW"-->
+                    <!--android:data="http://www.android.com" />-->
+
+            <!--</PreferenceScreen>-->
+
+        <!--</PreferenceCategory>-->
+
+        <!--<PreferenceCategory-->
+            <!--android:title="preference_attributes">-->
+
+            <!--<CheckBoxPreference-->
+                <!--android:key="parent_checkbox_preference"-->
+                <!--android:title="title_parent_preference"-->
+                <!--android:summary="summary_parent_preference" />-->
+
+            <!--&lt;!&ndash; The visual style of a child is defined by this styled theme attribute. &ndash;&gt;-->
+            <!--<CheckBoxPreference-->
+                <!--android:key="child_checkbox_preference"-->
+                <!--android:dependency="parent_checkbox_preference"-->
+                <!--android:layout="?android:attr/preferenceLayoutChild"-->
+                <!--android:title="title_child_preference"-->
+                <!--android:summary="summary_child_preference" />-->
+
+        <!--</PreferenceCategory>-->
+
+    <!--</PreferenceScreen>-->
+
+</PreferenceScreen>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.acclimate.payne.simpletestapp.activities.moreInfosAlerts.MoreInfoAlertsActivity">
+
+
+    <!-- edit Button -->
+    <item
+        android:id="@+id/moreinfo_menu_edit"
+        android:title="@string/moreindo_edit_alert"
+        android:visible="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_edit"/>
+
+    <!-- trash button -->
+    <item
+        android:id="@+id/moreinfo_menu_trash"
+        android:title="@string/moreinfo_trash_alert"
+        android:visible="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_trash" />
+
+
+
+</menu>

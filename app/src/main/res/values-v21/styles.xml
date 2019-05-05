@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Extended styles for sdk 21 and up -->
+    <style name="AppThemeExtended" parent="AppTheme">
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@transition/explode</item>
+        <item name="android:windowExitTransition">@transition/explode</item>
+        <item name="android:windowContentTransitions">true</item>
+
+
+    </style>
+
+
+
+</resources>

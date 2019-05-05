@@ -1,0 +1,88 @@
+{
+  "project_info": {
+    "project_number": "746348091619",
+    "firebase_url": "https://acclimate-c79ea.firebaseio.com",
+    "project_id": "acclimate-c79ea",
+    "storage_bucket": "acclimate-c79ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746348091619:android:ab8d694bac491e86",
+        "android_client_info": {
+          "package_name": "com.acclimate.payne.simpletestapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746348091619-us1brim0b4dvti4419abgphq5bhdalnq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "e575299a5ceaf2b7ce641b22d30d193c811d205c"
+          }
+        },
+        {
+          "client_id": "746348091619-2baok1dsp7gen3m3sc0rqgl0klunq10q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "f413c25310c2ec40cb6f56a00781b9a652b1800a"
+          }
+        },
+        {
+          "client_id": "746348091619-1g3sbkps33ck645vkmr5ubdb2e2rk4lf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "657472f84bde72c35b1fefd1a820ac2946931536"
+          }
+        },
+        {
+          "client_id": "746348091619-c0eelmb993jts1r54lcc8od5brnaioil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "d180b4340cd36c15835f5ce631203c3536a83d8c"
+          }
+        },
+        {
+          "client_id": "746348091619-rmvvnprk49v4jmi16c4t6b808qcu4c5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "ad2265a26c0befb2b218b35bd8fc0fee75fdbe88"
+          }
+        },
+        {
+          "client_id": "746348091619-oravdfrqqlrlafai858oflj2qflb36pj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acclimate.payne.simpletestapp",
+            "certificate_hash": "4d6ce3e04f4e7df0d23d1942af0c283b0fb7302a"
+          }
+        },
+        {
+          "client_id": "746348091619-eol6p6a03risogk3bds3e83l0tja2rfl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS0bgc_5gzL1zH-r6avvhy3pyEHhOG0Fk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746348091619-eol6p6a03risogk3bds3e83l0tja2rfl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

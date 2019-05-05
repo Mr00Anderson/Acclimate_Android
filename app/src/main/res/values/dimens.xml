@@ -1,0 +1,25 @@
+<resources>
+    <dimen name="logo_margin">10dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="micro_margin">8dp</dimen>
+    <dimen name="small_margin">25dp</dimen>
+    <dimen name="medium_margin">45dp</dimen>
+
+
+    <dimen name="vote_alert_height">30dp</dimen>
+    <dimen name="vote_alert_width">41dp</dimen>
+
+
+    <dimen name="user_bubble_title_width">225dp</dimen>
+    <dimen name="user_bubble_descr_width">225dp</dimen>
+    <dimen name="bubble_radius">10dp</dimen>
+    <dimen name="more_info_height">32dp</dimen>
+
+    <dimen name="pin_elevation">4dp</dimen>
+
+</resources>

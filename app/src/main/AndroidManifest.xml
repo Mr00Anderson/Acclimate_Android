@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.acclimate.payne.simpletestapp">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- GPS + OSMDroid -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!--
+     minSdk < 21 , to enable MultiDex :
+    <application
+        ...
+        android:name="android.support.multidex.MultiDexApplication">
+    </application>
+    -->
+    <application
+        android:name="com.acclimate.payne.simpletestapp.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTask"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.activities.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!--
+                TODO : add an ACTION-VIEW INTENT FILTER (to allow for Google to search for app)
+                https://stackoverflow.com/questions/34367875/android-adding-at-least-one-activity-with-an-action-view-intent-filter-after-u
+                -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.activities.main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.authentification.AuthUIActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- [START fcm_default] -->
+        <!--
+             Set custom default icon. This is used when no icon is set for incoming notification messages.
+             See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_couleur_icon" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set
+             for the incoming notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!-- TODO: For default_notif_chans, see: https://medium.com/exploring-android/exploring-android-o-notification-channels-94cd274f604c -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" /> <!-- TODO: Add default notif channel id -->
+        <!-- [END fcm_default] -->
+
+        <service
+            android:name="com.acclimate.payne.simpletestapp.notifications.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true"> <!-- TODO: make sure "enabled" and "exported" are necessary -->
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.acclimate.payne.simpletestapp.notifications.MyJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.activities.alertForm.NewAlertFormActivity"
+            android:label="@string/title_activity_new_alert_form"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.deviceStorage.preferences.SettingsPrefActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- photos -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.acclimate.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.activities.moreInfosAlerts.MoreInfoAlertsActivity"
+            android:label="@string/title_activity_more_info_alerts"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.acclimate.payne.simpletestapp.wip.AlertListActivity"
+            android:label="@string/title_activity_alert_list"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

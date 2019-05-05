@@ -1,0 +1,17 @@
+Used design pattern for the first time :
+
+    Observer : Android ViewModel and LiveData
+        Alert Storage with Pin display update
+
+    Singleton : Custom
+
+    Callback : AsyncTask
+
+
+    Abstract Algorithm : Custom
+        requests : send, getResponse
+            send() -> setup Url, exchange
+
+
+    Factory : custom
+        request

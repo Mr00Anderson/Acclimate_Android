@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_gradient"
+    tools:context=".authentification.AuthUIActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <ImageView
+                    android:id="@+id/auth_logo_acclimate"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginTop="60dp"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/logo_blanc" />
+
+                <LinearLayout
+                    android:id="@+id/Mode_Selection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:text="Sélectionnez une méthode"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/email_selector"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:drawableLeft="@drawable/logo_couleur_icon"
+                        android:text="Email"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/google_selector"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:drawableLeft="@drawable/fui_ic_googleg_color24dp"
+                        android:text="Google"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Selected_Method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Email/Password layout part-->
+                    <LinearLayout
+                        android:id="@+id/Email_Method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <!-- Si pas encore Signed In -->
+                        <LinearLayout
+                            android:id="@+id/email_not_signed_in_fields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/prompt_email"
+                                android:inputType="textEmailAddress"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                            <EditText
+                                android:id="@+id/password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/prompt_password"
+                                android:imeActionId="6"
+                                android:imeActionLabel="@string/action_sign_in_short"
+                                android:imeOptions="actionUnspecified"
+                                android:inputType="textPassword"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <!-- Si pas encore Signed In -->
+                            <LinearLayout
+                                android:id="@+id/email_not_signed_in_buttons"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/email_sign_in_button"
+                                        style="@style/Widget.AppCompat.Button.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/sign_in_email"
+                                        android:textStyle="normal" />
+
+                                    <Button
+                                        android:id="@+id/email_register_button"
+                                        style="@style/Widget.AppCompat.Button.Colored"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/register_email"
+                                        android:textStyle="normal" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- Si déjà Signed In-->
+                            <LinearLayout
+                                android:id="@+id/email_sign_out_fields"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/email_show"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="40dp"
+                                    android:layout_marginTop="40dp"
+                                    android:text="Email"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal"/>
+
+                                <Button
+                                    android:id="@+id/email_verify_button"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/verify_email"
+                                    android:textStyle="normal"/>
+
+                                <Button
+                                    android:id="@+id/email_sign_out_button"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/email_sign_out"
+                                    android:textStyle="normal"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- Google Sign In layout part -->
+                    <LinearLayout
+                        android:id="@+id/Google_Method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.google.android.gms.common.SignInButton
+                            android:id="@+id/google_sign_in_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="80dp"
+                            android:layout_marginTop="60dp" />
+
+                        <!-- Once Signed In with Google -->
+                        <LinearLayout
+                            android:id="@+id/google_sign_out_fields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/google_Photo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="20dp"
+                                android:clickable="false"
+                                android:text="Photo"
+                                android:textSize="18sp"
+                                app:srcCompat="@drawable/logo_blanc" />
+
+                            <TextView
+                                android:id="@+id/google_DisplayName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DisplayName"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/google_Email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:text="Email"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/google_sign_out_button"
+                                    style="@style/Widget.AppCompat.Button.Colored"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Se déconnecter"
+                                    android:textStyle="normal"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

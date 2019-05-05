@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/earth"/>
+    <corners android:topRightRadius="@dimen/bubble_radius" android:topLeftRadius="@dimen/bubble_radius" android:bottomRightRadius="@dimen/bubble_radius"/>
+</shape>

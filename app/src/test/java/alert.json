@@ -1,0 +1,43 @@
+{
+  "certitude": "Observé",
+  "count": null,
+  "dateDeMiseAJour": "2008/08/03 00:00:00",
+  "description": "...",
+  "geometry": {
+    "coordinates": [
+      -68.0872817539999,
+      48.624732158
+    ],
+    "polyCoordinates": null,
+    "type": "Point"
+  },
+  "id": "69433",
+  "lat": 48.624732158,
+  "lng": -68.0872817539999,
+  "nom": "Inondation",
+  "severite": "Mineure",
+  "source": "user",
+  "sousCategorie": "Inondation",
+  "territoire": "Grand-Métis",
+  "type": "Feu",
+  "urgence": "Passée",
+  "minusOneUsers": [],
+  "photoPath": null,
+  "plusOneUsers": [],
+  "score": 1,
+  "user": {
+    "dateCreation": "2018-08-24 15:46:18",
+    "email": "sophies.s@gmail.com",
+    "firstName": "Sophie",
+    "karma": {
+      "points": 0
+    },
+    "lastName": "Savoie",
+    "registrationToken": [
+      "eipgnpehipqhwifpowqbwio"
+    ],
+    "uId": "x1232",
+    "userName": "sophie"
+  }
+
+}

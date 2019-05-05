@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Librairie: https://github.com/daimajia/AndroidViewAnimations -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromXDelta="-6"
+        android:toXDelta="6"
+        android:duration="30"
+        android:repeatCount="5"
+        android:repeatMode="reverse" />
+</set>

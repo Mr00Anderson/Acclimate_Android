@@ -1,0 +1,145 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.firebase-perf'
+apply plugin: 'io.fabric'
+
+// To obtain the signed apk for release build (https://stackoverflow.com/a/52406173/9768291)
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.acclimate.payne.simpletestapp"
+        minSdkVersion 16
+        targetSdkVersion 27
+        multiDexEnabled true
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+            shrinkResources false // in conjunction with 'minifyEnabled'
+            minifyEnabled false   // test if everything still works properly
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    packagingOptions {
+        /*
+        https://stackoverflow.com/a/47509465/9768291
+        Fix for the following build error:
+        « More than one file was found with OS independent path 'META-INF/license.txt' »
+         */
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation "com.android.support:exifinterface:27.1.1" // to get rid of dependency warnings
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+//    // Multidex for minSdk < 21 TODO: Implement when required
+//    implementation 'com.android.support:multidex:1.0.3'
+
+    // General Firebase services (core functionalities)
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+
+    // Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:16.2.1'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.android.gms:play-services-identity:16.0.0' //TODO: verify necessary
+
+    // Firebase Cloud Messaging (Notifications)
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
+    implementation 'com.firebase:firebase-jobdispatcher:0.8.5'
+
+    // Firebase CrashLytics
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    //Firebase storage
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+
+    // Firebase Performance
+    implementation 'com.google.firebase:firebase-perf:16.2.5'
+
+    // Google Location
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    // OSMDroid (Map)
+    implementation 'org.osmdroid:osmdroid-android:6.0.2'
+    implementation 'org.osmdroid:osmdroid-wms:6.0.1'
+    implementation 'org.osmdroid:osmdroid-mapsforge:6.0.1'
+    implementation 'org.osmdroid:osmdroid-geopackage:6.0.1'
+    implementation 'com.github.MKergall:osmbonuspack:6.5.2' // Historical Pin Clusters
+
+    // Spring Android
+    implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+    // JSON @ https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.6'
+
+    // Animations et Images
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.faruktoptas:FancyShowCaseView:1.0.1'
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+
+    // @Getters/@Setters (DOWNGRADED FOR A REASON! You could try upgrading, but it might brake)
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+
+    // ViewModel and LiveData
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+
+    // card view
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    // worker (https://developer.android.com/jetpack/androidx/releases/work)
+    implementation "android.arch.work:work-runtime:1.0.1"
+
+    // email intent builder
+    implementation 'de.cketti.mailto:email-intent-builder:1.0.0'
+
+
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-milestone'
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,5 @@
+<vector android:height="24dp" android:tint="@color/default_vote"
+    android:viewportHeight="100.0" android:viewportWidth="100.0"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/default_vote" android:pathData="M 50,95 5,2.5 97.5,5 z"/>
+</vector>

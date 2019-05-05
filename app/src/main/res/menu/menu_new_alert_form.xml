@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.alertForm.NewAlertFormActivity">
+
+
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:enabled="true"
+        android:icon="@drawable/btn_moreinfo"
+        android:title="Cast"
+        android:visible="true"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        tools:icon="@drawable/mr_button_light" />
+</menu>

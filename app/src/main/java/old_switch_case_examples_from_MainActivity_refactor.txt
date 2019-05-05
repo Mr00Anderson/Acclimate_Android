@@ -1,0 +1,42 @@
+    case (R.id.cB_histo):
+        // Does not save the filter selection as a Preference! (too laggy)
+        if (!MapDisplay.historiqueLoaded){
+
+            Snackbar.make(mapView, "Cette opération peut prendre un certain temps.",
+                    Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            item.setEnabled(false);
+
+            final MenuItem tmp = item;
+
+            final BoundingBox currentBbox = myMapDisplay.getBoundingBox();
+            final BoundingBox largeBox = MapDisplay.enlarge(currentBbox);
+
+            new Thread( () -> {
+
+                // request histo pin for current boundingBox
+                myMapDisplay.getAlertController().requestHistoricalAlertFromServer(largeBox);
+
+                // manager.getHistorique();
+
+                runOnUiThread( () -> {
+                            myMapDisplay.refresh();
+                            tmp.setEnabled(true);
+                        });
+            }).start();
+
+            MapDisplay.historiqueFilter = toggleFilterCheckBox(tmp); // returns new value
+            MapDisplay.historiqueLoaded = true;
+        } else {
+            MapDisplay.historiqueFilter = toggleFilterCheckBox(item); // returns new value
+            myMapDisplay.refresh();
+        }
+        break;
+
+
+    case (R.id.centerBtn):
+        IGeoPoint center = mapView.getMapCenter();
+        Toast.makeText(this,
+                "Center\n Lat : " + center.getLatitude() +
+                        "\nLong : " + center.getLongitude(),
+                Toast.LENGTH_SHORT).show();
+        break;

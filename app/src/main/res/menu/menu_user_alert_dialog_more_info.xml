@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- User profile button -->
+    <item
+        android:layout_gravity="start"
+        android:id="@+id/more_info_back"
+        android:icon="@drawable/ic_arrow_back_black_24dp"
+        android:title="@string/cancel"
+        android:tooltipText="Informations"
+        android:visible="true"
+        app:showAsAction="always" />
+
+</menu>

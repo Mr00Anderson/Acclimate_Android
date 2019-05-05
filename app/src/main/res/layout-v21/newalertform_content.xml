@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lert_new_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.alertForm.NewAlertFormActivity"
+    tools:showIn="@layout/newalertform_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/mini_map_alert"
+            android:layout_width="match_parent"
+            android:layout_height="277dp" />
+
+        <EditText
+            android:id="@+id/alert_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="@string/temp_bubble_title"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="10sp" />
+
+        <EditText
+            android:id="@+id/alert_territoire"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="@string/territoire_placeholder"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/text_severity"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:lineSpacingExtra="18sp"
+            android:text="Sévérité" />
+
+        <Spinner
+            android:id="@+id/severity_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/severity" />
+
+        <TextView
+            android:id="@+id/form_alert_type"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:lineSpacingExtra="18sp"
+            android:text="Catégorie de l'alerte" />
+
+        <Spinner
+            android:id="@+id/form_spinner_alert_type"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:entries="@array/alert_type" />
+
+        <TextView
+            android:id="@+id/form_alert_subtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/form_alert_subtype" />
+
+        <Spinner
+            android:id="@+id/form_spinner_subtype"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:id="@+id/photo_and_descr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/add_photo_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/cam_icon" />
+
+                <TextView
+                    android:id="@+id/add_photo_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/add_photo_text" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/alert_description"
+                android:layout_width="271dp"
+                android:layout_height="84dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/temp_bubble_desc"
+                android:inputType="textMultiLine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_alert_form_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_cancel" />
+
+            <Button
+                android:id="@+id/btn_alert_form_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_confrim" />
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
