@@ -1,3 +1,5 @@
+![Acclimate_logo](https://raw.githubusercontent.com/payne911/Acclimate_Android/master/app/src/main/res/drawable/logo_couleur.png)
+
 # Acclimate_Android
 The public and Open Source repository of the [Android application](https://play.google.com/store/apps/details?id=com.acclimate.payne.simpletestapp) of the [Acclimate](https://acclimate-web.herokuapp.com/) project.
 
