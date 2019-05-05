@@ -1,5 +1,5 @@
 <p align="center"> 
-  <img src="https://raw.githubusercontent.com/payne911/Acclimate_Android/master/app/src/main/res/drawable/logo_couleur.png">
+  <img src="https://raw.githubusercontent.com/payne911/Acclimate_Android/master/repo_images/logo_couleur.png">
 </p>
 
 # Acclimate_Android
@@ -15,3 +15,6 @@ The public and Open Source repository of the [Android application](https://play.
 * [Charles-Philippe Lepage](https://github.com/CPLepage) : UI Design, Acclimate's identity (logo, color palet, etc.), WebApp codebase
 * [Olivier Lepage-Applin](https://github.com/L-Applin) : OSMDroid integration (map), Android frontend and backend (file storage, karma system, etc.)
 * [Sophie Savoie](https://github.com/sophiesavoie) : Database, web parser, data source integration (real time data extraction), Monitored Zones integration in backend
+
+# Screenshots
+![AlertInfo](/repo_images/alert_info.png?raw=true "AlertInfo")
