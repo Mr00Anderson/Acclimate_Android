@@ -17,6 +17,6 @@ The public and Open Source repository of the [Android application](https://play.
 * [Sophie Savoie](https://github.com/sophiesavoie) : Database, web parser, data source integration (real time data extraction), Monitored Zones integration in backend
 
 # [Screenshots](https://github.com/payne911/Acclimate_Android/tree/master/repo_images)
-![AlertInfo](/repo_images/alert_info.png?raw=true&s=200 "AlertInfo")
-![Home](/repo_images/home.png?raw=true&s=200 "Home")
-![Notification](/repo_images/notif.png?raw=true&s=200 "Notification")
+![AlertInfo](/repo_images/alert_info.png?raw=true "AlertInfo")
+![Home](/repo_images/home.png?raw=true "Home")
+![Notification](/repo_images/notif.png?raw=true "Notification")
