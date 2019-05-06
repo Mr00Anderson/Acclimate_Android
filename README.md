@@ -6,8 +6,8 @@
 The public and Open Source repository of the [Android application](https://play.google.com/store/apps/details?id=com.acclimate.payne.simpletestapp) of the [Acclimate](https://acclimate-web.herokuapp.com/) project.
 
 # Other Acclimate repo
-* [WebApp](https://github.com/payne911/Acclimte-WebApp)
-* [Server](https://github.com/L-Applin/acclimateServer)
+* [WebApp](https://github.com/payne911/Acclimate_WebApp)
+* [Server](https://github.com/L-Applin/acclimateServer) ([public repo](https://github.com/sophiesavoie/acclimateServerPublic))
 
 # Collaborators
 * [Normand Desmarais](https://github.com/NormandDesmarais) : Initial set up (3-tier architecture and Spring server)
